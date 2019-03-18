@@ -16,8 +16,8 @@ const TaskGroups = () => {
   const { taskState } = React.useContext(TaskContext);
   const sortedTasks = sortTasks(taskState);
 
-  // implement useEffects here to fetch real data from an api
-  
+  // implement useEffects here to fetch real data from an external api instead of context api
+
   return (
     <div className="task-groups">
       {sortedTasks.map((taskGroup: SortedTask) => {

@@ -12,7 +12,7 @@ const Group = ({ location }: RouteProps) => {
   const group = location ? location.pathname.split('/group/')[1] : '';
   const tasks = getGroupTasks(group, taskState);
 
-  // implement useEffects here to fetch real data from an api
+  // implement useEffects here to fetch real data from an external api instead of context api
 
   return (
     <section className="group">
