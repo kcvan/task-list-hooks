@@ -13,9 +13,11 @@ import {
 import './TaskGroups.scss';
 
 const TaskGroups = () => {
-  const { taskState } = React.useContext(TaskContext)
+  const { taskState } = React.useContext(TaskContext);
   const sortedTasks = sortTasks(taskState);
 
+  // implement useEffects here to fetch real data from an api
+  
   return (
     <div className="task-groups">
       {sortedTasks.map((taskGroup: SortedTask) => {
