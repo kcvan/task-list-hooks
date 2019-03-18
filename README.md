@@ -1,10 +1,14 @@
 ### How to start
 
-Run `npm i`
+Clone repository by running:<br>
+`git clone https://github.com/kcvan/task-list-wonderschool.git`<br><br>
 
-Run `npm start`
+Inside the project run in your command line:
 
-Navigate to `http://localhost:3000/` in your browser
+`npm i`<br>
+`npm start`<br><br>
+
+Navigate to `http://localhost:3000/` in your browser<br>
 
 ## Available Scripts
 
