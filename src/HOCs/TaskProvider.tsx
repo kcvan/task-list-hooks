@@ -51,12 +51,18 @@ const undoCompletedTask = (taskState: TaskContextProps[], payload: TaskContextPr
   let foundTask = taskState.find((tasks: TaskContextProps) => tasks.id === id );
   const foundTaskIndex = taskState.findIndex((tasks: TaskContextProps) => tasks.id === id );
 
-  taskState.forEach((task: TaskContextProps) => {
-    if (task.dependencyIds.includes(id)) {
-      const foundDependentTask = taskState.findIndex((tasks: TaskContextProps) => tasks.id === task.id );
-      taskState[foundDependentTask].completedAt = null;
+  const findDeepDependants = (head: TaskContextProps) => {
+    for (let i = 0; i < taskState.length; i++) {
+      if (taskState[i].dependencyIds.includes(head.id)) {
+        taskState[i].completedAt = null;
+        findDeepDependants(taskState[i]);
+      }
     }
-  });
+  }
+
+  if (foundTask) {
+    findDeepDependants(foundTask);
+  }
 
   return [
     ...taskState.slice(0, foundTaskIndex),
