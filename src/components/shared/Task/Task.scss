@@ -1,0 +1,76 @@
+.task-container {
+  display: flex;
+  height: 5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  &.task-locked {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover {
+    &:not(.task-locked) {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+
+  &:active {
+    &:not(.task-locked) {
+      background-color: lightgrey;
+    }
+  }
+
+  &:first-of-type {
+    &:before {
+      background-color: lightgray;
+      top: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &:after {
+    background-color: lightgrey;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.task {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.task-content {
+  align-items: center;
+  display: flex;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.task-icon-container {
+  align-items: center;
+  display: flex;
+  width: 14%;
+}
+
+.task-meta {
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+  }
+}

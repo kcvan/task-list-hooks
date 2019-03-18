@@ -1,0 +1,44 @@
+.task-group {
+  align-items: center;
+  display: flex;
+  height: 5rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.task-group-content {
+  align-items: center;
+  display: flex;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.group-caret-container {
+  align-items: center;
+  display: flex;
+  width: 12%;
+}
+
+.task-group-meta {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  p {
+    color: grey;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}

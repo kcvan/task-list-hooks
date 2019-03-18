@@ -1,0 +1,31 @@
+.group {
+  min-height: 40vh;
+  width: 40vw;
+}
+
+header {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 300;
+  }
+
+  .all-groups {
+    color: #69A8EF;
+    cursor: pointer;
+    line-height: 38px;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.group-content {
+  margin-top: 1rem;
+}

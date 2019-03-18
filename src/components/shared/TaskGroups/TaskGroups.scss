@@ -1,0 +1,30 @@
+.task-groups {
+  margin-top: 1rem;
+}
+
+.task-group-link {
+  display: flex;
+  position: relative;
+
+  &:first-of-type {
+    &:before {
+      background-color: lightgray;
+      top: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &:after {
+    background-color: lightgrey;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
