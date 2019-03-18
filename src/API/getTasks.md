@@ -41,10 +41,19 @@
  
 * **Error Response:**
 
+  * **Code:** 400 BAD REQUEST <br />
+      **Content:** `{
+        error : {
+          body: { tasks: [] },
+          message: "An error has occured, please try again later",
+          code: 400,
+        }
+      }`
+
   * **Code:** 404 NOT FOUND <br />
     **Content:** `{
       error : {
-        body: [],
+        body: { tasks: [] },
         message: "No tasks found.",
         code: 404,
       }
