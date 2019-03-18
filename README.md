@@ -1,6 +1,6 @@
 ### How to start
 
-Clone repository by running:<br>
+Clone repository by running in your command line:<br>
 `git clone https://github.com/kcvan/task-list-wonderschool.git`<br><br>
 
 Inside the project run in your command line:
