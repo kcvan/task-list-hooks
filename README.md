@@ -1,7 +1,9 @@
 ### How to start
 
 Run `npm i`
+
 Run `npm start`
+
 Navigate to `http://localhost:3000/` in your browser
 
 ## Available Scripts
